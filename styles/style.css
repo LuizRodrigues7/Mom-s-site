@@ -20,63 +20,83 @@
         background-color: #232023;
     }
 
-    .slider-container{
-        position: relative;
-        width: 350px;
-        height: 250px;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px black;
-        bottom: 250px;
-        left: 35px;
-    }
+    * {box-sizing:border-box}
 
-    .image-container{
-        display: flex;
-        transition: transform 0.4s ease-in-out;
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 100vh;
+        position: relative;
+        margin: auto;
+        top: -30%;
+        
     }
 
     img{
-        width:250px;
-        height: auto;
+        border: solid rgb(209, 178, 3);
+        border-radius: 6px;
     }
 
-    .btn{
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
         position: absolute;
         top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
         color: white;
-        font-size: 1.6rem;
-        transform: translateY(-50%);
-        opacity: 0.5;
-        cursor: pointer;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
     }
 
-    .btn.prev{
-        left: 10px;
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
     }
 
-    .btn.next{
-        right: 10px;
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
     }
 
-    .button:hover{
-        opacity: 1;
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+         width: 100%;
+        text-align: center;
     }
 
-    .prev-button{
-        position: relative;
-        bottom: 380px;
-        left: 40px;
-        opacity: 0.5;
-        background-color: transparent;
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
     }
 
-    .next-button{
-        position: relative;
-        bottom: 380px;
-        left: 310px;
-        opacity: 0.5;
-        background-color: transparent;
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+         animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
     }
 
       /* SIDEBAR POSITION */

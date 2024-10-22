@@ -8,47 +8,32 @@ document.querySelectorAll('[data-toggle-sidebar]').forEach(toggle => {
      }
    });
 });
-const IMAGE_WIDTH = 500;
-const DELAY = 3000;
-const $prev = document.querySelector('.prev');
-const $next = document.querySelector('.next');
-const $imagecontainer = document.querySelector('.image-container');
-const $images = document.querySelector('.img');
-let currentImg = 1;
-let timeout;
 
-function updateImg() {
-   if(currentImg > $images.length) {
-      currentImg = 1;
-   } else if (currentImg < 1) {
-      currentImg = $images.length;
-   }
+let slideIndex = 1;
+showSlides(slideIndex);
 
-   $imagecontainer.style.transform = `translateX(-$
-   {(currentImg - 1) * IMAGE_WIDTH}px`;
-
-   timeout = setTimeout(
-      () => {
-         currentImg++;
-         updateImg();
-      },
-      DELAY,
-   );
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-$prev.addEventListener(
-   'click',
-   () => {
-      clearTimeout(timeout);
-      currentImg--;
-      updateImg();
-   },
-);
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-$next.addEventListener(
-   'click',
-   () => {
-   currentImg++;
-   updateImg();
-   },
-)
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
