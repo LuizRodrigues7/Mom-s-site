@@ -22,13 +22,21 @@
 
     * {box-sizing:border-box}
 
+    .first-title{
+        z-index: 1;
+        position: relative;
+        bottom: 140px;
+        text-align: center;
+        color: white;
+    }
+
     /* Slideshow container */
     .slideshow-container {
         max-width: 100vh;
         position: relative;
         margin: auto;
-        top: -30%;
-        
+        top: -60%;
+        margin-left: 10px;
     }
 
     img{
@@ -59,8 +67,9 @@
 
     /* Position the "next button" to the right */
     .next {
-        right: 0;
+        left: 360px;
         border-radius: 3px 0 0 3px;
+        color: white;
     }
 
     /* On hover, add a black background color with a little bit see-through */
@@ -110,6 +119,7 @@
         max-height: 450px;
         border: solid rgb(209, 178, 3);
         border-width: 1px;
+        z-index: 1;
     }
     .sidebar__content {
         padding: 13px;
