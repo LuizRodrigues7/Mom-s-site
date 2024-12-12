@@ -22,6 +22,11 @@
         background-color: black;
         border-radius: 50%;
         justify-content: center;
+        box-shadow: 2px 0px 2px;
+    }
+
+    nav{
+        position: sticky;
     }
 
     .navbar-container{
@@ -47,4 +52,32 @@
     li{
         padding: 3px;
         background-color: #232023;
+    }
+
+    .content-1{
+        display: flex;
+        gap: 200px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-test{
+        padding: 2px;
+        border:solid #E6C625;
+        border-radius: 8px;
+    }
+
+    .prev-button, .next-button{
+        position: relative;
+        right: 300px;
+        bottom: 170px;
+        background-color: transparent;
+    }
+
+    .prev-button{
+        right: 540px;
+    }
+
+    .next-button{
+        right: 85px;
     }
