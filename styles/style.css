@@ -6,27 +6,21 @@
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    color: white;
+    color: black;
 }
     
     body {
         height: 100vh;
         margin: 0;
         display: grid;
-        background-color: #232023;
+        background-color: whitesmoke;
     }
 
     .nav-logo{
-        height: 50px;
+        height: 70px;
         position: absolute;
-        background-color: black;
         border-radius: 50%;
         justify-content: center;
-        box-shadow: 2px 0px 2px;
-    }
-
-    nav{
-        position: sticky;
     }
 
     .navbar-container{
@@ -36,9 +30,9 @@
         padding: 17px;
         align-items: center;
         justify-content: center;
-        background-color: #E6C625;
+        background-color: #9540DB;
         max-height: 40px;
-        box-shadow: 0px 2px 5px black;
+        box-shadow: 0px 2px 5px #9540DB;
     }
 
     ul{
@@ -46,12 +40,12 @@
         gap: 30px;
         font-size: 20px;
         list-style: none;
-        filter: drop-shadow(2px 0px);
     }
 
     li{
-        padding: 3px;
-        background-color: #232023;
+        padding: 4px;
+        color: whitesmoke;
+        border-radius: 1rem;
     }
 
     .content-1{
@@ -59,11 +53,13 @@
         gap: 200px;
         justify-content: center;
         align-items: center;
+        margin-top: 50px;
+        margin-bottom: 80px;
     }
 
     .img-test{
         padding: 2px;
-        border:solid #E6C625;
+        border:solid #9540DB;
         border-radius: 8px;
     }
 
@@ -80,4 +76,40 @@
 
     .next-button{
         right: 85px;
+    }
+
+    .content-2{
+        display: flex;
+        gap: 200px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .prev-button-2, .next-button-2{
+        position: relative;
+        background-color: transparent;
+    }
+
+    .prev-button-2{
+        right: 735px;
+        bottom: 30px;
+    }
+
+    .next-button-2{
+        right: 280px;
+        bottom: 30px;
+    }
+
+    .footer-content-1{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .hyperlinks{
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 3px;
     }
